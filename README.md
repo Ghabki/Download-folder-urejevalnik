@@ -18,4 +18,4 @@ How to run
 1: run powershell as administratr
 2: napiši    Set-ExecutionPolicy RemoteSigned   stisni Enter, nato napisi   A    stisni Enter
 3: v powershellu pojdi do mape kjer imas skripto
-4: napisi   .\Download-urejevalnik.ps1       stisni Enter
+4: napisi   .\Download-urejevalnik.ps1       stisni Enter.
