@@ -3,6 +3,10 @@ OK
 Namenjeno je da ti uredi download mapo
 Torej, zaženeš in ti vse datoteke razporedi v 6 map (video, torrent, slike, exe, ostalo, dokumenti)
 
+.
+.
+.
+
 
 $Video_koncnice = "webm", "mkv", "flv", "vob", "ogg", "ogv", "avi", "mov", "mp4", "mpg", "m4v", "flv"
 
@@ -16,8 +20,9 @@ $Dokumenti_koncnice = "pdf", "docx", "doc", "html", "odt", "xls", "xlsx", "ods",
 
 $Ostalo_koncnice = "zip"
 
-
-
+.
+.
+.
 
 How to run
 
