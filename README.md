@@ -31,7 +31,7 @@ Ostalo = "zip"
 
 1: Run powershell as administrator
 
-2: Write    Set-ExecutionPolicy RemoteSigned   press Enter, then type   A    press enter Enter   (this is needed, because windows needs premission to run the script (you can read more here https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6)
+2: Write    Set-ExecutionPolicy RemoteSigned   press Enter, then type   A    press enter Enter   (this is needed, because windows needs premission to run the script (you can read more here https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6)
 
 3: Now in powershell navigate to the script location
 
