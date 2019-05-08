@@ -1,4 +1,14 @@
 Write-Output "Ghabkijev urejevalnik"
+Write-Output ""
+
+$name = Read-Host "Si preprican da zelis urediti Download mapo  (Y/N)"
+
+if ($name -ne "y"){
+    Write-Output "Program se bo zaustavil"
+    Start-Sleep -Seconds 1.3
+    exit
+}
+
 
 $lokacija = Get-Location
 $ime = $env:UserName
@@ -69,6 +79,7 @@ if (Test-Path "Ostalo") {
     Write-Output "Ostalo......Ok"
 }
 
+<#
 if (Test-Path "15Min") {
     Write-Output "15Min......Ok"
 }else{
@@ -76,7 +87,7 @@ if (Test-Path "15Min") {
     Write-Output "Creating 15Min folder....."
     New-Item 15Min -ItemType Directory
     Write-Output "15Min......Ok"
-}
+}#>
 
 Write-Output . . . .
 
@@ -127,5 +138,11 @@ foreach ($element in $Ostalo_koncnice) {
     $urejena_koncnica = ".\*." + $element
     Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Ostalo_folder 
 }
+
+
+
+Write-Output "Koncano"
+
+Write-Output "Datoteke ki niso znane se ni premikalo"
 
 
