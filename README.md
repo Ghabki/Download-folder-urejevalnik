@@ -45,3 +45,4 @@ Ostalo = "zip"
   - I haven't tested this script on other computers... (it might not work right)
   - Keep in mind if you alredy have a folder named as the names used in the script, it will put the files in the alredy folder that was there before  
   - Made this because i wanted to try powershell
+  - I think i can code in that you dont neeed to set-ExecutionPolicy manualy
