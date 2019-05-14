@@ -41,6 +41,7 @@ Ostalo = "zip"
 
 ### Notes
 
+  - If there are files with same name, it will not move the items(will fix.)
   - It's possible that you have the default download folder somewere else (in this case, the script wont work)
   - I haven't tested this script on other computers... (it might not work right)
   - Keep in mind if you alredy have a folder named as the names used in the script, it will put the files in the alredy folder that was there before  
