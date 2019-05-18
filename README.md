@@ -19,7 +19,7 @@ Exe = "exe", "msi", "apk", "bat", "reg"
 
 Slike = "png", "jpg", "jpeg", "gif", "eps", "ai", "ttif", "psd", "indd", "raw"
 
-Dokumenti = "pdf", "docx", "doc", "html", "odt", "xls", "xlsx", "ods", "ppt", "pptx", "txt"
+Dokumenti = "pdf", "docx", "doc", "html", "odt", "xls", "xlsx", "ods", "ppt", "pptx", "txt", "ico"
 
 Ostalo = "zip"
 
