@@ -1,4 +1,4 @@
-Write-Output "Ghabkijev urejevalnik"
+﻿Write-Output "Ghabkijev urejevalnik"
 Write-Output ""
 
 $name = Read-Host "Si preprican da zelis urediti Download mapo  (Y/N)"
@@ -95,7 +95,7 @@ Write-Output . . . .
 $Video_koncnice = "webm", "mkv", "flv", "vob", "ogg", "ogv", "avi", "mov", "mp4", "mpg", "m4v", "flv"
 $Torrent_koncnice = "torrent"
 $Exe_koncnice = "exe", "msi", "apk", "bat", "reg"
-$Slike_koncnice = "png", "jpg", "jpeg", "gif", "eps", "ai", "ttif", "psd", "indd", "raw"
+$Slike_koncnice = "png", "jpg", "jpeg", "gif", "eps", "ai", "ttif", "psd", "indd", "raw", "ico"
 $Dokumenti_koncnice = "pdf", "docx", "doc", "html", "odt", "xls", "xlsx", "ods", "ppt", "pptx", "txt"
 $Ostalo_koncnice = "zip"
 
