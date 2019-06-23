@@ -94,10 +94,10 @@ Write-Output . . . .
 
 $Video_koncnice = "webm", "mkv", "flv", "vob", "ogg", "ogv", "avi", "mov", "mp4", "mpg", "m4v", "flv"
 $Torrent_koncnice = "torrent"
-$Exe_koncnice = "exe", "msi", "apk", "bat", "reg"
-$Slike_koncnice = "png", "jpg", "jpeg", "gif", "eps", "ai", "ttif", "psd", "indd", "raw", "ico"
-$Dokumenti_koncnice = "pdf", "docx", "doc", "html", "odt", "xls", "xlsx", "ods", "ppt", "pptx", "txt"
-$Ostalo_koncnice = "zip"
+$Exe_koncnice = "exe", "msi", "apk", "bat", "reg", "jar"
+$Slike_koncnice = "png", "jpg", "jpeg", "gif", "eps", "ai", "ttif", "psd", "indd", "raw", "ico", "svg", "ps"
+$Dokumenti_koncnice = "pdf", "docx", "doc", "html", "odt", "xls", "xlsx", "ods", "ppt", "pptx", "txt", "csv", "log", "sql", "py", "epub", "java"
+$Ostalo_koncnice = "zip", "rar", "gz","R", "tgz", "vsix", "mp3", "wav", "flac", "diagcab", "iso"
 
 $Video_folder = $CelotnaLokacija + "\Video"
 $Torrent_folder = $CelotnaLokacija + "\Torrent"
@@ -106,43 +106,87 @@ $Slike_folder = $CelotnaLokacija + "\Slike"
 $Dokumenti_folder = $CelotnaLokacija + "\Dokumenti"
 $Ostalo_folder = $CelotnaLokacija + "\Ostalo"
 
+$count = 0
+
 
 
 
 foreach ($element in $Video_koncnice) {
     $urejena_koncnica = ".\*." + $element
-    Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Video_folder 
+
+    try {
+        Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Video_folder -ErrorAction Stop
+    }
+    catch {
+        $count = $count+1
+        Write-Output "File ni bil premaknjen"
+    }
+
 }
 
 foreach ($element in $Torrent_koncnice) {
     $urejena_koncnica = ".\*." + $element
-    Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Torrent_folder 
+
+    try {
+        Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Torrent_folder -ErrorAction Stop
+    }
+    catch {
+        $count = $count+1
+        Write-Output "File ni bil premaknjen"        
+    }
 }
 
 foreach ($element in $Exe_koncnice) {
     $urejena_koncnica = ".\*." + $element
-    Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Exe_folder 
+
+    try {
+        Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Exe_folder -ErrorAction Stop
+    }
+    catch {
+        $count = $count+1
+        Write-Output "File ni bil premaknjen"
+    }
 }
 
 foreach ($element in $Slike_koncnice) {
     $urejena_koncnica = ".\*." + $element
-    Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Slike_folder 
+
+    try {
+        Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Slike_folder -ErrorAction Stop
+    }
+    catch {
+        $count = $count+1
+        Write-Output "File ni bil premaknjen"
+    }
 }
 
 foreach ($element in $Dokumenti_koncnice) {
     $urejena_koncnica = ".\*." + $element
-    Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Dokumenti_folder 
+
+    try {
+        Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Dokumenti_folder -ErrorAction Stop
+    }
+    catch  {
+        $count = $count+1
+        Write-Output "File ni bil premaknjen"    
+    }
 }
 
 foreach ($element in $Ostalo_koncnice) {
     $urejena_koncnica = ".\*." + $element
-    Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Ostalo_folder 
+
+    try {
+        Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Ostalo_folder -ErrorAction Stop
+
+    }
+    catch {
+        $count = $count+1
+        Write-Output "File ni bil premaknjen"    
+    }
 }
-
-
 
 Write-Output "Koncano"
 
-Write-Output "Datoteke ki niso znane se ni premikalo"
+Write-Output "Števlilo datotek ki se ni premaknilo  >> " $count "(ali obstaja istoimenski duplikat, v tem primeru se mora preimenovati file ------ ali pa je nastal drugacen error)"
 
 
