@@ -15,13 +15,13 @@ Video = "webm", "mkv", "flv", "vob", "ogg", "ogv", "avi", "mov", "mp4", "mpg", "
 
 Torrent = "torrent"
 
-Exe = "exe", "msi", "apk", "bat", "reg"
+Exe = "exe", "msi", "apk", "bat", "reg", "jar"
 
-Slike = "png", "jpg", "jpeg", "gif", "eps", "ai", "ttif", "psd", "indd", "raw"
+Slike = "png", "jpg", "jpeg", "gif", "eps", "ai", "ttif", "psd", "indd", "raw", "ico", "svg", "ps"
 
-Dokumenti = "pdf", "docx", "doc", "html", "odt", "xls", "xlsx", "ods", "ppt", "pptx", "txt", "ico"
+Dokumenti = "pdf", "docx", "doc", "html", "odt", "xls", "xlsx", "ods", "ppt", "pptx", "txt", "csv", "log", "sql", "py", "epub", "java"
 
-Ostalo = "zip"
+Ostalo = "zip", "rar", "gz","R", "tgz", "vsix", "mp3", "wav", "flac", "diagcab", "iso"
 
 .
 .
@@ -41,9 +41,9 @@ Ostalo = "zip"
 
 ### Notes
 
-  - If there are files with same name, it will not move the items(will fix.)
+  - If there are files with same name, it will not move the items(will trow an exception)
   - It's possible that you have the default download folder somewere else (in this case, the script wont work)
   - I haven't tested this script on other computers... (it might not work right)
   - Keep in mind if you alredy have a folder named as the names used in the script, it will put the files in the alredy folder that was there before  
   - Made this because i wanted to try powershell
-  - I think i can code in that you dont neeed to set-ExecutionPolicy manualy
+  - I think i can code in, that you don't neeed to set-ExecutionPolicy manualy
