@@ -115,7 +115,9 @@ foreach ($element in $Video_koncnice) {
     $urejena_koncnica = ".\*." + $element
 
     try {
-        Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Video_folder -ErrorAction Stop
+        Get-ChildItem -Path $urejena_koncnica -Recurse | Move-Item -Destination $Video_folder -ErrorAction Stop<# Eroraction pomeni kaj naj naredi ko se zgodi napaka(npr. stop je stop, coninue je da nadaljuje izvajanje)#>
+        <#tukaj se mi zdi da se lahko odstrani -recurse. to nekako naredi da gre spet v subfolderje gledat da premakne stvari kar pa ne zelimo (nisem se preveril)#>
+        <# ter lahko se naredim ce je slucajno folder v tej mapi naj napise da je skipalo te folderje #>
     }
     catch {
         $count = $count+1
